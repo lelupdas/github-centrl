@@ -1,2 +1,2 @@
-# github-centrl
-This is my first change
+#!/bin/bash
+echo "Hello firstcode"
