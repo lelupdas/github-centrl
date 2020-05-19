@@ -1,0 +1,7 @@
+---
+- name: How to use commandline variable
+  hosts: localhost
+  user: ansb
+  tasks:
+  - debug:
+     msg: "Value of the var1={{ value1 }}  and var2={{ value2 }}"

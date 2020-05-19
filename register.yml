@@ -1,0 +1,11 @@
+---
+- name: how to use register to store module response
+  hosts: web
+  user: ansb
+  tasks:
+  - name: store the output of module with register
+    command: uptime
+    register: uptime_output
+  - name: showing the output
+    debug:
+     var: uptime_output

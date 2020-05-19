@@ -1,0 +1,10 @@
+---
+- name: creating file through varible
+  hosts: web
+  user: ansb
+  vars:
+   my_content: " Welcome to ansible variable \n"
+  tasks: 
+  - copy:
+     dest: /tmp/varfile
+     content: "{{my_content}}"

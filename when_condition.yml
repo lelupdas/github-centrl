@@ -1,0 +1,9 @@
+---
+ - name: To display when condition
+   user: ansb
+   hosts: localhost
+   tasks:
+   - copy:
+      dest: /tmp/when
+      content: "Condition testing file"
+     when: true

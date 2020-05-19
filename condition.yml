@@ -1,0 +1,11 @@
+- name: Make multiple directory
+  hosts: web
+  remote_user: ansb
+  tasks:
+  - name: Make multiple directory
+    command: mkdir /tmp/"{{ item }}"
+    with_items:
+    - dir4
+    - dir5
+    - dir6
+    when: true

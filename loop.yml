@@ -1,0 +1,10 @@
+---
+- name: This is to display loop concept
+  hosts: localhost
+  user: ansb
+  tasks: 
+  - name: How to user with_items
+    command: mkdir /tmp/"{{ item }}"
+    with_items:
+    - test1
+    - test2

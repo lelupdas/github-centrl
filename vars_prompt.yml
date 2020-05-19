@@ -1,0 +1,11 @@
+---
+- name: How to use variable with debug
+  hosts: web
+  user: ansb
+  vars_prompt:
+   name: var1
+   prompt: "Enter the variable value: "
+  tasks:
+   - name: "Below module use to print the value"
+     debug: 
+      msg: "Value of the variable is {{ var1 }}"

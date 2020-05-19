@@ -1,0 +1,14 @@
+---
+- name: how to use register to store module response
+  hosts: web
+  user: ansb
+  become : true
+  tasks:
+  - name: Copy the OSbackup script to destination
+    copy: src=/home/ansb/osbkp.sh dest=/home/ansb/osbkp.sh mode=0755
+  - name: store the output of module with register
+    command: sh /home/ansb/osbkp.sh
+    register: OSbackup_output
+  - name: showing the output
+    debug:
+     var: OSbackup_output
