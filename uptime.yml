@@ -1,0 +1,15 @@
+---
+ - hosts: web
+   remote_user: ansb
+   become: true
+   gather_facts: true
+   tasks:
+   - name: show uptime
+     command: uptime
+     register: uptime_output
+
+   - name: show uptime output
+     debug:
+      var: uptime_output
+...
+
