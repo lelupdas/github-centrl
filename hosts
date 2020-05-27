@@ -43,8 +43,17 @@
 ## db-[99:101]-node.example.com
 
 localhost ansible_connection=local
-[test]
+[web]
+192.168.0.130
+192.168.0.131
+[db]
 192.168.0.150
 192.168.0.151
+192.168.0.140
 192.168.0.141
+[infra:children]
+web
+db
+[docker]
+192.168.0.200
 
