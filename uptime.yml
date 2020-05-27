@@ -1,5 +1,5 @@
 ---
- - hosts: test
+ - hosts: all
    remote_user: ansb
    become: true
    gather_facts: true
