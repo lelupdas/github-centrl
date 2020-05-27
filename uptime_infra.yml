@@ -3,7 +3,7 @@
    remote_user: ansb
    become: true
    gather_facts: true
-#   ignore_errors: yes
+   ignore_errors: yes
    tasks:
    - name: show uptime
      command: uptime
